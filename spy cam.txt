@@ -1,0 +1,25 @@
+adb kill-server
+adb start-server
+adb devices
+
+Connect Your Android Device:
+
+Ensure your Android device is connected to your computer via USB cable.
+Enable USB Debugging:
+
+On your Android device, go to Settings > System > Developer options.
+If you don't see Developer options, go to About phone and tap on Build number 7 times to enable Developer options.
+Once enabled, go back to Developer options and enable USB debugging.
+Open Command Prompt (cmd) or Terminal:
+
+Depending on your operating system, open Command Prompt on Windows or Terminal on macOS/Linux.
+
+#connect the usb port to your phonne and allow it 
+adb tcpip 5555
+
+#connect the ip address
+adb connect 10.99.87.35:5555
+
+
+#to run the cam controller
+scrcpy -s 192.168.137.9:5555
